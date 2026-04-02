@@ -1,0 +1,66 @@
+\input{fixos/pacotes}
+\input{fixos/comandos}
+\usepackage{fixos/customizacoes}
+\usepackage{float}
+\usepackage{soul}
+\usepackage{xcolor}
+\usepackage{fvextra}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{ragged2e}
+
+\DefineVerbatimEnvironment{myverb}{Verbatim}{
+  breaklines=true,
+  breakanywhere=true,   % permite quebrar mesmo no meio de "palavras" longas
+  obeytabs=true,
+  tabsize=2,
+  fontsize=\small
+}
+\colorlet{hlyellow}{yellow!35}
+\colorlet{hlred}{red!25}
+\DeclareRobustCommand{\hlY}[1]{{\sethlcolor{hlyellow}\hl{#1}}} 
+\DeclareRobustCommand{\hlR}[1]{{\sethlcolor{hlred}\hl{#1}}}
+
+\input{editaveis/informacoes}
+\input{fixos/informacoes}
+\input{fixos/setup}
+
+\begin{document}
+
+\frenchspacing 
+\imprimircapa
+\imprimirfolhaderosto*
+
+\input{fixos/fichaCatalografica}
+\input{fixos/folhaDeAprovacao}
+% \input{editaveis/dedicatoria}
+\input{editaveis/agradecimentos}
+% \input{editaveis/epigrafe}
+\input{editaveis/resumo}
+\input{editaveis/abstract}
+\input{fixos/listasAutomaticas}
+\input{editaveis/abreviaturas}
+% \input{editaveis/simbolos}
+\input{fixos/indiceAutomatico}
+
+\textual
+
+\input{editaveis/introducao}
+\input{editaveis/referencialteorico}
+\input{editaveis/metodologia}
+\input{editaveis/propostasolucao}
+\input{editaveis/conclusao}
+
+\bookmarksetup{startatroot} 
+
+\postextual
+
+\bibliography{bibliografia} 
+% \input{editaveis/apendices}
+% \input{editaveis/anexos}
+\printindex
+
+\end{document}
+
